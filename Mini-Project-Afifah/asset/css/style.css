@@ -1,0 +1,350 @@
+/* Custom CSS */
+
+:root {
+  --brand: #d33f3f;
+  --body: #606060;
+  --dark: #19282f;
+  --border-radius: 4px;
+  --shadow: 0px 4px 60px rgba(0, 0, 0, 0.14);
+}
+
+/* reset & helpers */
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--dark);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: all 0.4s linear;
+}
+
+a:hover {
+  color: var(--brand);
+}
+
+a.custom-link {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-intro {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.section-intro p {
+  max-width: 500px;
+  margin: auto;
+}
+
+.custom-card {
+  transition: all 0.4s ease;
+  background: white;
+  border-radius: 50px;
+}
+
+.custom-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-5px);
+}
+
+/* Alert */
+.alert {
+    margin-bottom: 0px;
+}
+
+/* about */
+#hero {
+  min-height: 65vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/hero-7.jpg);
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+  width: 100%;
+}
+
+#hero h1 {
+  color: aliceblue;
+  font-weight: 700;
+}
+
+#hero .breadcrumb {
+  padding-left: 18vh;
+  max-width: 400px;
+  margin: 12px auto 28px auto;
+}
+
+#hero .breadcrumb-item {
+  color: aliceblue;
+}
+
+#hero .breadcrumb-item a {
+  color: goldenrod;
+}
+
+/* navigation */
+.navbar.bg-black {
+  border-bottom: 1px solid rgba(222, 159, 13, 0.8);
+}
+
+.navbar .navbar-nav .nav-link {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: goldenrod;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: var(--brand);
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+/* game features */
+.features {
+  padding: 44px 24px;
+  text-align: center;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  background-color: var(--brand);
+  color: white;
+  border-radius: var(--border-radius);
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.features h5 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.features p {
+  font-size: 14px;
+}
+
+/* heroes */
+.heroes {
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.heroes h5 {
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+.heroes small {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.heroes .heroes-img {
+  position: relative;
+  overflow: hidden;
+  background: url(../img/bg-char.jpg) no-repeat center;
+  border-radius: 20px;
+}
+
+.heroes img {
+  transition: all 0.5s ease;
+}
+
+.heroes-name {
+  display: flex;
+}
+
+.heroes-name a {
+  width: 125px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.heroes-name a:hover {
+  background-color: var(--brand);
+  color: white;
+}
+
+.heroes .heroes-name {
+  position: absolute;
+  bottom: 40px;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+.heroes:hover .heroes-name {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.heroes:hover img {
+  transform: scale(1.1);
+}
+
+.custom-card-heroes {
+  transition: all 0.4s ease;
+  background: white;
+  border-radius: 20px;
+  cursor: grab;
+}
+
+.custom-card-heroes:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-5px);
+}
+
+/* contact */
+#contact input.form-control {
+  height: 49px;
+}
+
+#contact .form-control {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+#contact .form-control:focus {
+  box-shadow: none;
+  border-color: var(--brand);
+}
+
+#contact .form-label {
+  color: white;
+}
+
+#contact .btn-light {
+  background-color: var(--brand);
+  color: white;
+  border-color: var(--brand);
+}
+
+#contact img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+/* Footer */
+footer p,
+footer ul li a {
+  color: white;
+}
+
+footer h5 {
+  color: goldenrod;
+  margin-bottom: 16px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0px;
+  line-height: 40px;
+}
+
+.footer-top {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/hero-9.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-top img {
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.social-links a:hover {
+  background-color: var(--brand);
+  color: white;
+}
+
+.heroes .social-links {
+  position: absolute;
+  bottom: 40px;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+.heroes:hover .social-links {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.footer-bottom {
+  background-color: var(--brand);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}

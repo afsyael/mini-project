@@ -51,8 +51,8 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
+                <input id="searchField" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-light" type="submit">Search</button>
             </form>
         </div>
         </div>
@@ -237,17 +237,10 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-
-
-    <!-- <script src="./assets/js/jquery.min.js"></script>
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/owl.carousel.min.js"></script>
-  <script src="./assets/js/app.js"></script> -->
 </body>
-
+<script>
+    document.getElementById("searchBtn").onclick = () => {
+        searchField.innerHTML = (searchField.value == "") ? alert("Type Something First!") : document.getElementById("searchField").focus();
+    }
+</script>
 </html>
